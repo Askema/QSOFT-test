@@ -1,0 +1,284 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Roboto";
+  font-style: normal;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Roboto";
+  font-style: normal;
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
+    url("../fonts/Roboto-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  color: #121920;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background-color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+picture {
+  display: block;
+}
+
+.container {
+  padding: 0 20px;
+  min-width: 375px;
+  max-width: 1210px;
+  margin: 0 auto;
+}
+
+.header {
+  box-shadow: 0px 3px 10px 0px #0000000d;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo {
+  padding: 16px 0;
+  order: -1;
+}
+
+.logo__link:hover {
+  opacity: 0.5;
+}
+
+.search {
+  align-self: center;
+  width: 100%;
+  flex-grow: 1;
+  order: 3;
+  position: relative;
+}
+
+.search::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  width: 100vw;
+  height: 1px;
+  background-color: #bbc4d6;
+  opacity: 50%;
+}
+
+.search__form {
+  margin: auto;
+}
+
+.search__input {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  padding-top: 5px;
+  padding-left: 29px;
+  margin-bottom: 2px;
+  font-size: 14px;
+  line-height: 16.41px;
+}
+
+.search__input::placeholder {
+  color: #bbc4d6;
+}
+
+.search__button {
+  width: 24px;
+  height: 24px;
+  background: transparent url("../img/search.svg") no-repeat;
+  border: 0;
+  position: absolute;
+  left: 3px;
+  top: 12px;
+}
+
+.profile {
+  padding: 15px 0 8px 0;
+  order: 2;
+}
+
+.profile__link {
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.profile__username {
+  display: none;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+
+.partners__title {
+  margin-top: 75px;
+  margin-bottom: 35px;
+  font-weight: 500;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.partners__list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: -30px;
+}
+
+.partners__item {
+  border: 1px solid #ebebf1;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 335px;
+  height: 140px;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.partners__item:hover {
+  box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1),
+    0px 0px 10px rgba(164, 164, 164, 0.03);
+}
+
+.partners__img-wrapper {
+  flex: 0 0 126px;
+}
+
+.partners__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    padding: 25px 0;
+  }
+
+  .profile {
+    padding: 20px 0;
+    position: relative;
+    order: 3;
+    padding-left: 20px;
+  }
+
+  .profile__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .search {
+    margin-left: 19px;
+    padding: 20px 0 20px 0;
+    width: 50%;
+    flex-grow: 0;
+  }
+
+  .search::before {
+    display: none;
+  }
+
+  .profile::before {
+    content: "";
+    position: absolute;
+    background-color: #bbc4d6;
+    opacity: 50%;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .search__input {
+    border: 1px solid #ebebf1;
+    border-radius: 5px;
+    padding-left: 39px;
+    padding-top: 0;
+    width: 95%;
+  }
+
+  .search__button {
+    top: 30px;
+    left: 14px;
+  }
+
+  .profile__username {
+    display: block;
+    color: #768298;
+    margin-right: 10px;
+  }
+
+  .partners__list {
+    justify-content: flex-start;
+  }
+
+  .partners__item {
+    flex: 0 0 calc(33% - 20px);
+    margin-right: 4px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .partners__title {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 58px;
+  }
+
+  .logo {
+    padding: 24px 0;
+  }
+
+  .search {
+    width: 67%;
+    padding: 19px 0 19px 0;
+  }
+
+  .search__input {
+    width: 97%;
+  }
+
+  .partners__list {
+    justify-content: flex-start;
+  }
+
+  .partners__item {
+    flex: 0 0 calc(25% - 30px);
+    margin-right: 15px;
+    margin-bottom: 30px;
+    height: 120px;
+  }
+}
